@@ -39,7 +39,31 @@ html {
     padding: 8px;
 }
 
+
+
+
+
+
+/* home */
 .home {
+    background-image: url(images/kanae1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.wedding-home {
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+}
+
+
+/* .home {
     background-color: #ffdeeb;
     font-weight: bold;
     text-align: center;
@@ -51,3 +75,19 @@ html {
     padding-left: 400px;
     align-items: center;
 }
+
+.wedding-home image {
+    corner-shape: round;
+}
+
+.rsvp {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    background-color: #F0FFDF;
+}
+
+.rsvp form {
+    flex-direction: column;
+    background-color: #ffdeeb;
+} */

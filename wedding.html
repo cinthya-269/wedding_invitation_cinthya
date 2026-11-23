@@ -25,11 +25,10 @@
 
     <!-- Home Section -->
     <section class="home" id="home">
-        <p>Wedding Invitation</p>
         <div class="wedding-home">
-            <h1 style="color: #A8DF8E;">Shinazugawa Sanemi</h1>
-            <img src="images/sanekana_wedding.png" alt="sanekana" class="sanekana">
-            <h1 style="color: #FFAAB8;">Kocho Kanae</h1>
+            <h1 style="color: #59AC77; padding-top: 300px;">Shinazugawa Sanemi</h1>
+            <img src="images/Kanae x Sanemi.jpg" alt="sanekana" class="sanekana" style="margin: 100px;">
+            <h1 style="color: #B03052; padding-top: 300px;">Kocho Kanae</h1>
         </div>
     </section>
 
@@ -55,6 +54,39 @@
                 <p>Location: Hotel Chinzanso Tokyo</p>
             </div>
         </div>
-    
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <h1>Gallery</h1>
+        <div class="gallery-container">
+            <img src="images/sanemi.jpg" alt="Gallery Image 1">
+            <img src="images/Sanemi x Kanae.jpg" alt="Gallery Image 2">
+            <img src="images/sanemi x kanae.jpg" alt="Gallery Image 3">
+            <img src="images/kanae.jpg" alt="Gallery Image 4">
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="rsvp" id="rsvp">
+        <h1>RSVP</h1>
+        <form action="submit_rsvp.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="attending">Will you attend?</label>
+            <select id="attending" name="attending" required>
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="letter">leave a message for us :</label>
+            <input type="text" id="letter" name="letter" required>
+
+
+            <button type="submit">Submit RSVP</button>
+        </form>
+    </section>
 </body>
 </html>
