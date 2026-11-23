@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Wedding Sanekana</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #F0FFDF;
+            padding: 30px 15px;
+        }
+
+        .admin-container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #B03052;
+            margin-bottom: 25px;
+        }
+
+        .upload-box {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        input[type="file"] {
+            margin-top: 15px;
+            max-width: 100%;
+        }
+
+        .table-box {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 13px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #FFD8DF;
+        }
+
+        button {
+            background: #F5BABB;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e9a4ad;
+        }
+
+        #status {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        @media(max-width: 600px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            .upload-box, .table-box {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="admin-container">
+
+    <h1>Wedding Invitation Admin ♡</h1>
+
+    <!-- CSV OTOMATIS DAN OPSIONAL -->
+    <div class="upload-box">
+
+        <h2>Wedding Guest List</h2>
+
+        <p>Data tamu otomatis dimuat dari CSV.</p>
+
+        <p id="status">Memuat data tamu...</p>
+
+        <hr style="margin: 20px 0;">
+
+        <label for="csvFile">
+            Ganti CSV (Opsional)
+        </label>
+
+        <br>
+
+        <input
+            type="file"
+            id="csvFile"
+            accept=".csv"
+        >
+
+    </div>
+
+    <!-- DAFTAR TAMU -->
+    <div class="table-box">
+
+        <h2>Daftar Tamu</h2>
+
+        <br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Tamu</th>
+                    <th>Instansi</th>
+                    <th>Kategori</th>
+                    <th>WhatsApp</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+
+            <tbody id="guestTable">
+                <tr>
+                    <td colspan="6">
+                        Memuat data tamu...
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<a href="wedding.html">letter</a>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
