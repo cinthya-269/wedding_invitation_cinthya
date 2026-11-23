@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +8,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class ="letter" style="background-image: url(images/RGV\ Invitations\ _\ printed\ invitations.jpg);">
-       <h1>Sanemi & Kanae wedding</h1>
-       <h2 id="guestName">Dear invited guests</h2>
-       <a href="wedding.html" class="btn">Click to see the letter</a>
+
+    <section class="letter" style="background-image: url('images/RGV Invitations _ printed invitations.jpg');">
+
+        <h1>Sanemi & Kanae wedding</h1>
+
+        <h2 id="guestName">Dear invited guests</h2>
+
+        <a href="wedding.html" class="btn">
+            Click to see the letter
+        </a>
+
     </section>
+
+    <script>
+        const params = new URLSearchParams(
+            window.location.search
+        );
+
+        const namaTamu = params.get("nama");
+
+        const guestName = document.getElementById("guestName");
+
+        if (namaTamu && namaTamu.trim() !== "") {
+            guestName.textContent = "Dear " + namaTamu;
+        }
+    </script>
+
 </body>
 </html>
